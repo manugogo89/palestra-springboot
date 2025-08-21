@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Utenti iscritti</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 30px;
+        }
+
+        .foto {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2>Utenti iscritti alla palestra</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Immagine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="utente : ${utenti}">
+                <td th:text="${utente.id}">1</td>
+                <td th:text="${utente.username}">MarioRossi</td>
+                <td th:text="${utente.email}">mario@email.it</td>
+                <td>
+                    <img class="foto" th:src="@{/immagini/default-user.jpg}" alt="Foto profilo" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

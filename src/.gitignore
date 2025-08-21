@@ -1,0 +1,25 @@
+
+.project
+.classpath
+.settings/
+
+# Build output
+target/
+build/
+out/
+
+# Log e temporanei
+*.log
+*.tmp
+*.swp
+tmp/
+spring.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Config locali che non vuoi su Git (esempio)
+src/main/resources/application-local.properties
+.env
+
