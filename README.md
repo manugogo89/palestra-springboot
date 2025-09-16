@@ -1,0 +1,1 @@
+Palestra Gestionale è un’applicazione web sviluppata in Spring Boot che permette la gestione di una palestra, inclusa la registrazione e gestione degli utenti. Gli utenti possono iscriversi, e l’amministratore può monitorare iscrizioni e informazioni dei membri in modo semplice e sicuro.
