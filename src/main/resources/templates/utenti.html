@@ -4,40 +4,49 @@
     <meta charset="UTF-8">
     <title>Utenti iscritti</title>
     <style>
+        /* Stile base della tabella */
         table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
+            width: 80%; 
+            margin: 20px auto; 
+            border-collapse: collapse; 
             font-family: Arial, sans-serif;
         }
 
+        /* Celle della tabella */
         th, td {
             padding: 12px;
             border: 1px solid #ccc;
             text-align: center;
         }
 
+        /* Intestazione tabella */
         th {
-            background-color: #4CAF50;
+            background-color: #4CAF50; 
             color: white;
         }
 
+       
         h2 {
             text-align: center;
             font-family: Arial, sans-serif;
             margin-top: 30px;
         }
 
+        /* Stile immagine profilo */
         .foto {
             width: 60px;
             height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
+            border-radius: 50%; /* forma circolare */
+            object-fit: cover; /* mantiene proporzioni senza deformare */
         }
     </style>
 </head>
 <body>
+
+    
     <h2>Utenti iscritti alla palestra</h2>
+
+    <!-- Tabella utenti -->
     <table>
         <thead>
             <tr>
@@ -48,15 +57,18 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Ciclo Thymeleaf per mostrare tutti gli utenti -->
             <tr th:each="utente : ${utenti}">
-                <td th:text="${utente.id}">1</td>
-                <td th:text="${utente.username}">MarioRossi</td>
-                <td th:text="${utente.email}">mario@email.it</td>
+                <td th:text="${utente.id}">1</td> 
+                <td th:text="${utente.username}">MarioRossi</td> 
+                <td th:text="${utente.email}">mario@email.it</td> 
                 <td>
+                   
                     <img class="foto" th:src="@{/immagini/default-user.jpg}" alt="Foto profilo" />
                 </td>
             </tr>
         </tbody>
     </table>
+
 </body>
 </html>

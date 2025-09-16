@@ -1,7 +1,7 @@
 package com.home.model;
 
 import jakarta.persistence.*;
-
+// questa classe rappresenta una tabella nel database
 @Entity
 public class Contatto {
 
